@@ -1,3 +1,5 @@
+import json
+
 from boltiot import Bolt, Sms
 
 from src import conf
@@ -9,3 +11,4 @@ sms = Sms(conf.SID, conf.AUTH_TOKEN, conf.TO_NUMBER, conf.FROM_NUMBER)
 while True:
     print("Reading sensor value")
     response = mybolt.analogRead('A0')
+    data = json.loads(response)
