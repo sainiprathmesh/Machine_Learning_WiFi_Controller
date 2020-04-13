@@ -1,0 +1,6 @@
+MAILGUN_API_KEY = '3750295f2f651d5ce4b78ebc8e7a8bb5-915161b7-8f79ed63'
+SANDBOX_URL = 'https://app.mailgun.com/app/sending/domains/sandbox2221182abb8e4f499149d2279c584321.mailgun.org'
+SENDER_EMAIL = 'prathmesh.saini_cs18@gla.ac.in'
+RECIPIENT_EMAIL = 'sainiprathmesh@gmail.com'
+API_KEY = 'This is your Bolt Cloud account API key'
+DEVICE_ID = 'This is the ID of your Bolt device'
