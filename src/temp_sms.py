@@ -12,3 +12,4 @@ while True:
     print("Reading sensor value")
     response = mybolt.analogRead('A0')
     data = json.loads(response)
+    print("Sensor value is: " + str(data['value']))
