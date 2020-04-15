@@ -1,4 +1,5 @@
 import json
+import time
 
 import requests
 from boltiot import Bolt
@@ -48,3 +49,26 @@ def send_telegram_message(message):
         print("An error occurred in sending the alert message via Telegram")
         print(e)
         return False
+
+
+while True:
+    # Step 1
+    sensor_value = get_sensor_value_from_pin("A0")
+    print("The current sensor value is:", sensor_value)
+
+    # Step 2
+    if sensor_value == -999:
+        print("Request was unsuccessfull. Skipping.")
+        time.sleep(10)
+        continue
+
+    # Step 3
+    if sensor_value >= conf.threshold:
+        print("Sensor value has exceeded threshold")
+        message = "Alert! Sensor value has exceeded " + str(conf.threshold) + \
+                  ". The current value is " + str(sensor_value)
+        telegram_status = send_telegram_message(message)
+        print("This is the Telegram status:", telegram_status)
+
+    # Step 4
+    time.sleep(10)
