@@ -3,7 +3,7 @@ import time
 
 from boltiot import Bolt, Email
 
-from src import email_conf
+from src.temp_alert_mail import email_conf
 
 minimum_limit = 500
 maximum_limit = 600

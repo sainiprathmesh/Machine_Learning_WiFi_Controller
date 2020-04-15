@@ -3,7 +3,7 @@ import time
 
 from boltiot import Bolt, Sms
 
-from src import conf
+from src.temp_alert_sms import conf
 
 minimum_limit = 300
 maximum_limit = 600
